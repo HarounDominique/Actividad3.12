@@ -2,6 +2,10 @@ package modelo;
 
 import java.io.Serializable;
 
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Empleados implements Serializable{
 	
 	private String dni;
@@ -11,6 +15,8 @@ public abstract class Empleados implements Serializable{
 	private String teléfono;
 
 	private float porcentaRetención;
+	
+	private Empresas empresa;
 	
 	
 	public abstract float calculoNomina();
@@ -46,7 +52,4 @@ public abstract class Empleados implements Serializable{
 	public void setPorcentaRetención(float porcentaRetención) {
 		this.porcentaRetención = porcentaRetención;
 	}
-	
-	
-
 }
