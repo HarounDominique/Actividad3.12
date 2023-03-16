@@ -54,6 +54,12 @@ public abstract class Empleados implements Serializable{
 		this.nombre = nombre;
 	}
 
+	@Override
+	public String toString() {
+		return "Empleados [dni=" + dni + ", nombre=" + nombre + ", telefono=" + telefono + ", porcentaRetencion="
+				+ porcentaRetencion + "]";
+	}
+
 	public float getPorcentaRetencion() {
 		return porcentaRetencion;
 	}
